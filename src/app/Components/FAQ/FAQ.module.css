@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  width: 100%;
+  height: 800px;
+  background-color: var(--background);
+}
+
+.right,
+.left {
+  width: 50%;
+}
+
+.left {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+.right {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  font-size: 2.5rem;
+  font-weight: 800;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 3 / span 2;
+  grid-row: 3 / 3;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  grid-column: 2 / span 4;
+  grid-row: 5 / span 3;
+}
+
+.text p {
+  font-size: 1.2rem;
+}
