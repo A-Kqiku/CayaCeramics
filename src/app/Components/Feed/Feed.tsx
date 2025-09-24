@@ -1,20 +1,18 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import styles from "./Feed.module.css";
-import Image, { StaticImageData } from "next/image";
 import Slider from "../Slider/Slider";
 import { FiArrowRightCircle, FiArrowLeftCircle } from "react-icons/fi";
-import points from "../../images/points.svg";
 
 type FeedProps = {
-  urls: StaticImageData[];
+  urls: string[];
 };
 
 const Feed: React.FC<FeedProps> = ({ urls }) => {
   const [index, setIndex] = useState(0);
 
   const handleRightClick: () => void = () => {
-    if (index < 2) {
+    if (index < urls.length - 1) {
       setIndex((prevIndex) => (prevIndex + 1) % urls.length);
     }
   };
@@ -38,29 +36,15 @@ const Feed: React.FC<FeedProps> = ({ urls }) => {
       </div>
       <div className={styles.middle}>
         {" "}
-        <button className={styles.btnRightArrow}>
-          <FiArrowLeftCircle
-            className={styles.rightArrow}
-            onClick={handleLeftClick}
-          />
+        <button className={styles.btnRightArrow} onClick={handleLeftClick}>
+          <FiArrowLeftCircle className={styles.rightArrow} />
         </button>
         <Slider src={urls[index]} width={800} height={600} />
-        <button className={styles.btnRightArrow}>
-          <FiArrowRightCircle
-            className={styles.rightArrow}
-            onClick={handleRightClick}
-          />
+        <button className={styles.btnRightArrow} onClick={handleRightClick}>
+          <FiArrowRightCircle className={styles.rightArrow} />
         </button>
       </div>
-      <div className="bottom">
-        <Image
-          className={styles.index}
-          src={points}
-          width={40}
-          height={40}
-          alt="index"
-        />
-      </div>
+      <div className="bottom"></div>
     </div>
   );
 };

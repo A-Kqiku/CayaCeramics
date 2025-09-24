@@ -1,8 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
-import Logo from "../../images/logo.png";
+import Link, { LinkProps } from "next/link";
 import styles from "./Navbar.module.css";
-import { motion, spring } from "framer-motion";
+import { motion } from "framer-motion";
 import { Neonderthaw } from "next/font/google";
 
 const neonderthawFont = Neonderthaw({ subsets: ["latin"], weight: "400" });
@@ -29,7 +28,7 @@ export default function Navbar() {
         className="flex-none rounded-full"
       >
         <Image
-          src={Logo}
+          src={"/images/logo.png"}
           className={styles.logo}
           width={75}
           height={75}

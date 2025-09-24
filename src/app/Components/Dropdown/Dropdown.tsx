@@ -2,7 +2,6 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import styles from "./Dropdown.module.css";
-import { FaChevronDown } from "react-icons/fa";
 
 type DropdownProps = {
   question: string;

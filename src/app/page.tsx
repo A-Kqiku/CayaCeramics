@@ -3,17 +3,18 @@ import Navbar from "@/app/Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import FAQ from "./Components/FAQ/FAQ";
 import Feed from "./Components/Feed/Feed";
-import roteTasse from "./images/roteTasse.png";
-import blauerTeller from "./images/blauerTeller.png";
-import weisseTasse from "./images/cermaic_hero.png";
 
-const urls = [roteTasse, blauerTeller, weisseTasse];
+const urls = [
+  "/images/roteTasse.png",
+  "/images/blauerTeller.png",
+  "/images/cermaic_hero.png",
+];
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero src={weisseTasse} alt="placeholder" />
+      <Hero src={"/images/cermaic_hero.png"} alt="placeholder" />
       <FAQ />
       <Feed urls={urls} />
     </>

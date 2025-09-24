@@ -1,30 +1,21 @@
 import React from "react";
 import Image, { StaticImageData } from "next/image";
 import styles from "./Hero.module.css";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Ovo } from "next/font/google";
 
 type HeroProps = {
-  src: StaticImageData;
+  src: string;
   alt: string;
 };
 const ovo = Ovo({ subsets: ["latin"], weight: "400" });
 
-const containerVariants = {
+const containerVariants: Variants = {
   initial: { textShadow: "0px 0px 0px rgba(0,0,0,0)" },
   hover: {
     textShadow: "2px 2px 5px rgba(255,255,255,0.8)",
     transition: { staggerChildren: 0.05 },
   },
-};
-
-const lineVariants = {
-  initial: { scaleX: 0 },
-  hover: { scaleX: 1, transition: { duration: 0.3, ease: "easeInOut" } },
-};
-const outlineVariants = {
-  initial: { scaleX: 0 },
-  hover: { scaleX: 1 },
 };
 
 const Hero: React.FC<HeroProps> = ({ src, alt }) => {
@@ -69,6 +60,7 @@ const Hero: React.FC<HeroProps> = ({ src, alt }) => {
 
           <motion.button
             className={styles.button}
+            type="button"
             initial="initial"
             whileHover="hover"
             variants={containerVariants}

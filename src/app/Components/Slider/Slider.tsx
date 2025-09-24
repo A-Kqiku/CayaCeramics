@@ -3,7 +3,7 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./Slider.module.css";
 
 type SliderProps = {
-  src: StaticImageData;
+  src: string;
   height: number;
   width: number;
 };
