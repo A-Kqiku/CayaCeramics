@@ -1,20 +1,19 @@
 "use client";
 import Navbar from "@/app/Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
-import placeholder from "./placeholder.png";
 import FAQ from "./Components/FAQ/FAQ";
 import Feed from "./Components/Feed/Feed";
-import placeholder1 from "./placeholder1.jpg";
-import placeholder2 from "./placeholder2.jpg";
-import placeholder3 from "./placeholder3.jpg";
+import roteTasse from "../../public/images/roteTasse.png";
+import blauerTeller from "../../public/images/blauerTeller.png";
+import weisseTasse from "../../public/images/Ceramic_hero.png";
 
-const urls = [placeholder1, placeholder2, placeholder3];
+const urls = [roteTasse, blauerTeller, weisseTasse];
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Hero src={placeholder} alt="placeholder" />
+      <Hero src={weisseTasse} alt="placeholder" />
       <FAQ />
       <Feed urls={urls} />
     </>

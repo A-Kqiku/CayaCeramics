@@ -3,7 +3,6 @@ import Image, { StaticImageData } from "next/image";
 import styles from "./Hero.module.css";
 import { motion } from "framer-motion";
 import { Ovo } from "next/font/google";
-import placeholder from "../../Ceramic_hero.png";
 
 type HeroProps = {
   src: StaticImageData;
@@ -33,7 +32,7 @@ const Hero: React.FC<HeroProps> = ({ src, alt }) => {
     <div className={styles["hero-container"]}>
       <div className={styles["img-container"]}>
         <Image
-          src={placeholder}
+          src={src}
           className={styles["hero-img"]}
           width={800}
           height={1000}

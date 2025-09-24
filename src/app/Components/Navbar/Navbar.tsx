@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../Logo.png";
+import Logo from "../../../../public/images/Logo.png";
 import styles from "./Navbar.module.css";
 import { motion, spring } from "framer-motion";
 import { Neonderthaw } from "next/font/google";
@@ -15,6 +15,7 @@ export default function Navbar() {
       {/* Logo */}
       <motion.div
         whileHover={{
+          rotate: 360,
           boxShadow:
             "0 0 12px rgba(255,255,255,0.2), 0 0 18px rgba(255,255,255,1), 0 0 24px rgba(255,255,255,0.6)",
           fontWeight: "bolder",

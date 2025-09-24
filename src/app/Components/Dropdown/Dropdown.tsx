@@ -40,9 +40,6 @@ const Dropdown: React.FC<DropdownProps> = ({ question, answer }) => {
       >
         <h1 className={styles.question}>{question}</h1>
         {open && <p className="answer">{answer}</p>}
-        <button className={styles.btnRightArrow}>
-          <FaChevronDown className={styles.arrow} onClick={toggleDropdown} />
-        </button>
       </div>
     </div>
   );

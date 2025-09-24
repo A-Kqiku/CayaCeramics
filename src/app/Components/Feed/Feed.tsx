@@ -4,7 +4,7 @@ import styles from "./Feed.module.css";
 import Image, { StaticImageData } from "next/image";
 import Slider from "../Slider/Slider";
 import { FiArrowRightCircle, FiArrowLeftCircle } from "react-icons/fi";
-import points from "../../points.svg";
+import points from "../../../../public/images/points.svg";
 
 type FeedProps = {
   urls: StaticImageData[];

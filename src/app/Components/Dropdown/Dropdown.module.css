@@ -11,6 +11,10 @@
   position: relative;
 }
 
+.question-block:hover {
+  cursor: pointer;
+}
+
 .question-block h1 {
   font-size: 20px;
 }
@@ -27,11 +31,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-}
-
-.open .arrow {
-  margin-right: 10px;
-  margin-top: 15px;
 }
 
 .open p {
@@ -54,6 +53,10 @@
   z-index: 200;
   animation-name: open;
   animation-duration: 0.2s;
+}
+
+.open:hover {
+  cursor: pointer;
 }
 
 @keyframes open {
