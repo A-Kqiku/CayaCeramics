@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Logo from "../../../../public/images/Logo.png";
+import Logo from "../../images/logo.png";
 import styles from "./Navbar.module.css";
 import { motion, spring } from "framer-motion";
 import { Neonderthaw } from "next/font/google";

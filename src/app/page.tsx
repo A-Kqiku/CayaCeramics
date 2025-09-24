@@ -3,9 +3,9 @@ import Navbar from "@/app/Components/Navbar/Navbar";
 import Hero from "./Components/Hero/Hero";
 import FAQ from "./Components/FAQ/FAQ";
 import Feed from "./Components/Feed/Feed";
-import roteTasse from "../../public/images/roteTasse.png";
-import blauerTeller from "../../public/images/blauerTeller.png";
-import weisseTasse from "../../public/images/Ceramic_hero.png";
+import roteTasse from "./images/roteTasse.png";
+import blauerTeller from "./images/blauerTeller.png";
+import weisseTasse from "./images/cermaic_hero.png";
 
 const urls = [roteTasse, blauerTeller, weisseTasse];
 
